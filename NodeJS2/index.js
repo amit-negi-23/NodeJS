@@ -12,7 +12,12 @@ http.createServer(function(req, res){
 }).listen(8080);
 
 
-fs.appendFile('notes.txt', 'Note1: Learning NodeJs', function(err){
-    if(err) throw  err;
-    console.log('Saved');
-});
+// fs.appendFile('notes.txt', 'Note1: Learning NodeJs', function(err){
+//     if(err) throw  err;
+//     console.log('Saved');
+// });
+
+fs.open('notes2.txt', 'w', function(err, file){
+    if(err) throw err;
+    console.log('Saved!')
+})
