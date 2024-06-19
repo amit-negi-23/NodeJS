@@ -10,3 +10,9 @@ http.createServer(function(req, res){
     
     console.log("Server listening on port 8080")
 }).listen(8080);
+
+
+fs.appendFile('notes.txt', 'Note1: Learning NodeJs', function(err){
+    if(err) throw err;
+    console.log('Saved');
+});
