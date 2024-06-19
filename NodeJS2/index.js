@@ -17,7 +17,12 @@ http.createServer(function(req, res){
 //     console.log('Saved');
 // });
 
-fs.open('notes2.txt', 'w', function(err, file){
+// fs.open('notes2.txt', 'w', function(err, file){
+//     if(err) throw err;
+//     console.log('Saved!')
+// })
+
+fs.writeFile('notes3.txt', 'Hello content by Amit !', function(err){
     if(err) throw err;
-    console.log('Saved!')
+    console.log("Saved!")
 })
