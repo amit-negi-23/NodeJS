@@ -27,7 +27,12 @@ http.createServer(function(req, res){
 //     console.log("Saved!")
 // })
 
-fs.unlink('demoFile.txt', function(err){
+// fs.unlink('demoFile.txt', function(err){
+//     if(err) throw err;
+//     console.log('File deleted!');
+// })
+
+fs.rename('mynewfile.txt', 'myrenamedfile.txt', function(err){
     if(err) throw err;
-    console.log('File deleted!');
+    console.log('File Renamed!');
 })
