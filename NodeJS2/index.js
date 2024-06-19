@@ -22,7 +22,12 @@ http.createServer(function(req, res){
 //     console.log('Saved!')
 // })
 
-fs.writeFile('notes3.txt', 'Hello content by Amit !', function(err){
+// fs.writeFile('notes3.txt', 'Hello content by Amit !', function(err){
+//     if(err) throw err;
+//     console.log("Saved!")
+// })
+
+fs.unlink('demoFile.txt', function(err){
     if(err) throw err;
-    console.log("Saved!")
+    console.log('File deleted!');
 })
